@@ -1,0 +1,249 @@
+$ pwd
+/c/Users/Jenny
+
+Jenny@Jenny MINGW64 ~
+$ mkdir blast-tutorial
+
+Jenny@Jenny MINGW64 ~
+$ ls
+'3D Objects'/                        NetHood@
+ Anaconda3/                          NTUSER.DAT
+ AppData/                            ntuser.dat.LOG1
+'Application Data'@                  ntuser.dat.LOG2
+'Beauchamp Dropbox (Not Linked)'/    NTUSER.DAT{50313468-70e8-11e8-a9ef-c39bcbb6ba1f}.TM.blf
+ blast-tutorial/                     NTUSER.DAT{50313468-70e8-11e8-a9ef-c39bcbb6ba1f}.TMContainer00000000000000000001.regtrans-ms
+ Contacts/                           NTUSER.DAT{50313468-70e8-11e8-a9ef-c39bcbb6ba1f}.TMContainer00000000000000000002.regtrans-ms
+ Cookies@                            ntuser.ini
+ Desktop/                            OneDrive/
+ Documents/                          Pictures/
+ Downloads/                          PrintHood@
+ Dropbox/                            R/
+'Dropbox (Beauchamp Lab)'@           Recent@
+ Favorites/                          Roaming/
+ ImageJ/                            'Saved Games'/
+ IntelGraphicsProfiles/              Searches/
+ Links/                              SendTo@
+'Local Settings'@                   'Start Menu'@
+'Measure Cumulative Distances.ijm'   Templates@
+ MicrosoftEdgeBackups/               Tracing/
+ Music/                              Videos/
+'My Documents'@                      wc/
+
+Jenny@Jenny MINGW64 ~
+$ pwd
+/c/Users/Jenny
+
+Jenny@Jenny MINGW64 ~
+$ cd blast-tutorial
+
+Jenny@Jenny MINGW64 ~/blast-tutorial
+$ pwd
+/c/Users/Jenny/blast-tutorial
+
+Jenny@Jenny MINGW64 ~/blast-tutorial
+$ mkdir db
+
+Jenny@Jenny MINGW64 ~/blast-tutorial
+$ ls
+db/
+
+Jenny@Jenny MINGW64 ~/blast-tutorial
+$ curl ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
+-r--r--r--   1 ftp      anonymous       85 Oct 19  2017 ChangeLog
+-r--r--r--   1 ftp      anonymous 18975298 Oct 19  2017 ncbi-blast-2.7.1+-1.src.rpm
+-r--r--r--   1 ftp      anonymous       62 Oct 19  2017 ncbi-blast-2.7.1+-1.src.rpm.md5
+-r--r--r--   1 ftp      anonymous 189531092 Oct 19  2017 ncbi-blast-2.7.1+-1.x86_64.rpm
+-r--r--r--   1 ftp      anonymous       65 Oct 19  2017 ncbi-blast-2.7.1+-1.x86_64.rpm.md5
+-r--r--r--   1 ftp      anonymous 23254824 Oct 19  2017 ncbi-blast-2.7.1+-src.tar.gz
+-r--r--r--   1 ftp      anonymous       63 Oct 19  2017 ncbi-blast-2.7.1+-src.tar.gz.md5
+-r--r--r--   1 ftp      anonymous 26953343 Oct 19  2017 ncbi-blast-2.7.1+-src.zip
+-r--r--r--   1 ftp      anonymous       60 Oct 19  2017 ncbi-blast-2.7.1+-src.zip.md5
+-r--r--r--   1 ftp      anonymous 91684802 Oct 19  2017 ncbi-blast-2.7.1+-win64.exe
+-r--r--r--   1 ftp      anonymous       62 Oct 19  2017 ncbi-blast-2.7.1+-win64.exe.md5
+-r--r--r--   1 ftp      anonymous 234312405 Oct 19  2017 ncbi-blast-2.7.1+-x64-linux.tar.gz
+-r--r--r--   1 ftp      anonymous       69 Oct 19  2017 ncbi-blast-2.7.1+-x64-linux.tar.gz.md5
+-r--r--r--   1 ftp      anonymous 133010337 Oct 19  2017 ncbi-blast-2.7.1+-x64-macosx.tar.gz
+-r--r--r--   1 ftp      anonymous       70 Oct 19  2017 ncbi-blast-2.7.1+-x64-macosx.tar.gz.md5
+-r--r--r--   1 ftp      anonymous 91357638 Oct 19  2017 ncbi-blast-2.7.1+-x64-win64.tar.gz
+-r--r--r--   1 ftp      anonymous       69 Oct 19  2017 ncbi-blast-2.7.1+-x64-win64.tar.gz.md5
+-r--r--r--   1 ftp      anonymous 134710683 Oct 19  2017 ncbi-blast-2.7.1+.dmg
+-r--r--r--   1 ftp      anonymous       56 Oct 19  2017 ncbi-blast-2.7.1+.dmg.md5
+
+Jenny@Jenny MINGW64 ~/blast-tutorial
+$ ls
+db/
+
+Jenny@Jenny MINGW64 ~/blast-tutorial
+$ ls db
+
+Jenny@Jenny MINGW64 ~/blast-tutorial
+$ cd db
+
+Jenny@Jenny MINGW64 ~/blast-tutorial/db
+$ curl \
+> ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.fasta.gz \
+> > ./uniprot_sprot.fasta.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 84.1M  100 84.1M    0     0   180k      0  0:07:57  0:07:57 --:--:--  170k
+
+Jenny@Jenny MINGW64 ~/blast-tutorial/db
+$ gunzip -k ./uniprot_sprot.fasta.gz
+
+Jenny@Jenny MINGW64 ~/blast-tutorial/db
+$ ls
+uniprot_sprot.fasta  uniprot_sprot.fasta.gz
+
+Jenny@Jenny MINGW64 ~/blast-tutorial/db
+$ "C:\Program Files\NCBI\blast-2.7.1+\bin\makeblastdb.exe" -in uniprot_sprot.fasta -dbtype prot -out uniprot_sprot_r2018_08
+
+
+Building a new DB, current time: 10/11/2018 10:05:39
+New DB name:   C:\Users\Jenny\blast-tutorial\db\uniprot_sprot_r2018_08
+New DB title:  uniprot_sprot.fasta
+Sequence type: Protein
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 558590 sequences in 29.9152 seconds.
+
+Jenny@Jenny MINGW64 ~/blast-tutorial/db
+$ ls
+uniprot_sprot.fasta  uniprot_sprot.fasta.gz  uniprot_sprot_r2018_08.phr  uniprot_sprot_r2018_08.pin  uniprot_sprot_r2018_08.psq
+
+Jenny@Jenny MINGW64 ~/blast-tutorial/db
+$ mkdir query
+
+Jenny@Jenny MINGW64 ~/blast-tutorial/db
+$ curl http://eagle.fish.washington.edu/cnidarian/Ab_4denovo_CLC6_a.fa \
+>
+
+Jenny@Jenny MINGW64 ~/blast-tutorial/db
+$ ls
+query/               uniprot_sprot.fasta.gz      uniprot_sprot_r2018_08.pin
+uniprot_sprot.fasta  uniprot_sprot_r2018_08.phr  uniprot_sprot_r2018_08.psq
+
+Jenny@Jenny MINGW64 ~/blast-tutorial/db
+$ curl http://eagle.fish.washington.edu/cnidarian/Ab_4denovo_CLC6_a.fa \
+> > ../query/Ab_4denovo_CLC6_a.fa
+bash: ../query/Ab_4denovo_CLC6_a.fa: No such file or directory
+
+Jenny@Jenny MINGW64 ~/blast-tutorial/db
+$ ls query
+
+Jenny@Jenny MINGW64 ~/blast-tutorial/db
+$ ls
+query/               uniprot_sprot.fasta.gz      uniprot_sprot_r2018_08.pin
+uniprot_sprot.fasta  uniprot_sprot_r2018_08.phr  uniprot_sprot_r2018_08.psq
+
+Jenny@Jenny MINGW64 ~/blast-tutorial/db
+$ curl http://eagle.fish.washington.edu/cnidarian/Ab_4denovo_CLC6_a.fa >query/Ab_4denovo_CLC6_a.fa
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 1982k  100 1982k    0     0  4236k      0 --:--:-- --:--:-- --:--:-- 4236k
+
+Jenny@Jenny MINGW64 ~/blast-tutorial/db
+$ ls
+query/               uniprot_sprot.fasta.gz      uniprot_sprot_r2018_08.pin
+uniprot_sprot.fasta  uniprot_sprot_r2018_08.phr  uniprot_sprot_r2018_08.psq
+
+Jenny@Jenny MINGW64 ~/blast-tutorial/db
+$ ls query
+Ab_4denovo_CLC6_a.fa
+
+Jenny@Jenny MINGW64 ~/blast-tutorial/db
+$ mkdir analyses
+
+Jenny@Jenny MINGW64 ~/blast-tutorial/db
+$ ls
+analyses/  uniprot_sprot.fasta     uniprot_sprot_r2018_08.phr  uniprot_sprot_r2018_08.psq
+query/     uniprot_sprot.fasta.gz  uniprot_sprot_r2018_08.pin
+
+Jenny@Jenny MINGW64 ~/blast-tutorial/db
+$ "C:\Program Files\NCBI\blast-2.7.1+\bin\blastx.exe" -query query/Ab_4denovo_CLC6_a.fa  -db uniprot_sprot_r2018_08 -out analyses/Ab
+_4-uniprot_blastx.tab -evalue 1e-20 -num_threads 4 -max_target_seqs 1 -outfmt 6
+
+Jenny@Jenny MINGW64 ~/blast-tutorial/db
+$ head analyses/Ab_4-uniprot_blastx.tab
+solid0078_20110412_FRAG_BC_WHITE_WHITE_F3_QV_SE_trimmed_contig_3        sp|O42248|GBLP_DANRE    82.456  171     30      0       1   513      35      205     2.74e-103       301
+solid0078_20110412_FRAG_BC_WHITE_WHITE_F3_QV_SE_trimmed_contig_5        sp|Q08013|SSRG_RAT      75.385  65      16      0       3   197      121     185     1.36e-028       104
+solid0078_20110412_FRAG_BC_WHITE_WHITE_F3_QV_SE_trimmed_contig_6        sp|P12234|MPCP_BOVIN    76.623  77      18      0       2   232      286     362     7.10e-024       98.6
+solid0078_20110412_FRAG_BC_WHITE_WHITE_F3_QV_SE_trimmed_contig_9        sp|Q41629|ADT1_WHEAT    82.258  62      11      0       3   188      170     231     5.91e-028       104
+solid0078_20110412_FRAG_BC_WHITE_WHITE_F3_QV_SE_trimmed_contig_13       sp|Q32NG4|GALD1_XENLA   54.444  90      40      1       1   270      140     228     1.47e-028       106
+solid0078_20110412_FRAG_BC_WHITE_WHITE_F3_QV_SE_trimmed_contig_23       sp|Q9GNE2|RL23_AEDAE    97.222  72      2       0       67  282      14      85      6.62e-044       142
+solid0078_20110412_FRAG_BC_WHITE_WHITE_F3_QV_SE_trimmed_contig_31       sp|B3EWZ9|HEPHL_ACRMI   56.589  129     53      1       2   379      26      154     1.75e-044       157
+solid0078_20110412_FRAG_BC_WHITE_WHITE_F3_QV_SE_trimmed_contig_31       sp|B3EWZ9|HEPHL_ACRMI   44.715  123     64      1       8   364      380     502     8.93e-030       115
+solid0078_20110412_FRAG_BC_WHITE_WHITE_F3_QV_SE_trimmed_contig_31       sp|B3EWZ9|HEPHL_ACRMI   44.531  128     65      3       11  376      732     859     1.16e-027       109
+solid0078_20110412_FRAG_BC_WHITE_WHITE_F3_QV_SE_trimmed_contig_32       sp|Q641Y2|NDUS2_RAT     88.034  117     14      0       2   352      334     450     6.25e-072       224
+
+Jenny@Jenny MINGW64 ~/blast-tutorial/db
+$ wc analyses/Ab_4-uniprot_blastx.tab
+  242  2904 32160 analyses/Ab_4-uniprot_blastx.tab
+
+Jenny@Jenny MINGW64 ~/blast-tutorial/db
+$ mv query/ ..
+
+Jenny@Jenny MINGW64 ~/blast-tutorial/db
+$ ls
+analyses/            uniprot_sprot.fasta.gz      uniprot_sprot_r2018_08.pin
+uniprot_sprot.fasta  uniprot_sprot_r2018_08.phr  uniprot_sprot_r2018_08.psq
+
+Jenny@Jenny MINGW64 ~/blast-tutorial/db
+$ ls ..
+db/  query/
+
+Jenny@Jenny MINGW64 ~/blast-tutorial/db
+$ mv analyses/ ..
+
+Jenny@Jenny MINGW64 ~/blast-tutorial/db
+$ ls ..
+analyses/  db/  query/
+
+Jenny@Jenny MINGW64 ~/blast-tutorial/db
+$ ls
+uniprot_sprot.fasta  uniprot_sprot.fasta.gz  uniprot_sprot_r2018_08.phr  uniprot_sprot_r2018_08.pin  uniprot_sprot_r2018_08.psq
+
+Jenny@Jenny MINGW64 ~/blast-tutorial/db
+$ cd ..
+
+Jenny@Jenny MINGW64 ~/blast-tutorial
+$ ls
+analyses/  db/  query/
+
+Jenny@Jenny MINGW64 ~/blast-tutorial
+$ pwd
+/c/Users/Jenny/blast-tutorial
+
+Jenny@Jenny MINGW64 ~/blast-tutorial
+$ cd ../Documents/GitHub/Jenny-Snailfish/
+
+Jenny@Jenny MINGW64 ~/Documents/GitHub/Jenny-Snailfish (master)
+$ head README.md
+# Jenny-Snailfish
+Analysis of RADSeq data from 45 different Liparidae species.
+
+Jenny@Jenny MINGW64 ~/Documents/GitHub/Jenny-Snailfish (master)
+$ pwd
+/c/Users/Jenny/Documents/GitHub/Jenny-Snailfish
+
+Jenny@Jenny MINGW64 ~/Documents/GitHub/Jenny-Snailfish (master)
+$ cd ../..
+
+Jenny@Jenny MINGW64 ~/Documents
+$ cd ..
+
+Jenny@Jenny MINGW64 ~
+$ pwd
+/c/Users/Jenny
+
+Jenny@Jenny MINGW64 ~
+$ cd Documents/GitHub/Jenny-Snailfish/
+
+Jenny@Jenny MINGW64 ~/Documents/GitHub/Jenny-Snailfish (master)
+$ cp -r  ../../../blast-tutorial/ .
+
+Jenny@Jenny MINGW64 ~/Documents/GitHub/Jenny-Snailfish (master)
+$ ls
+blast-tutorial/  README.md
+
+Jenny@Jenny MINGW64 ~/Documents/GitHub/Jenny-Snailfish (master)
+$
