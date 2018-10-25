@@ -1,4 +1,5 @@
-#Data
+# Data
 *raw data too big for GitHub*  
-This file contains the RADSeq data from *many* species of snailfishes.  
+RADSeq data from 48 individuals of 30 species of snailfishes.  
+checksum file for originally downloaded file in case it needs to be redownloaded later.  
 
