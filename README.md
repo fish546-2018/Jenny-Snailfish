@@ -15,23 +15,22 @@ Week 3: Organize repository and gain access to data
 Week 4: Have data downloaded, inspected, and trim low quality bases. Install programs needed for further analysis/phylogeny construction.  
 Week 5 goals: Become familiar with new programs and begin running basic analyses.
 ## Directories:  
-- blast-tutorial
-	- files created from conducting the blast tutorial in GitBash
-	- completed Oct 11 2018
-	- contains text file of command line coding
-	- contains subdirectories: analyses for blast analysis, db for data downloads, and query for data queries.
--  Snailfish-Radseq
-	-  all files pertaining to analysis of a RADSeq data set for ~45 species of snailfish.
-	-  data comes from work with collaborators at the Alaska Fisheries Science Center
-	-  **Subdirectories**
-		-  Data
-			-  contains raw data files
-			-  original data fastq too big for GitHub
-		-  Analyses
-			-  contains files created for analysis of data
-			-  currently contains html output of FastQC
-		-  Notebooks
-			-  contains Jupyter notebooks documenting steps in the process.
+- xFISH546
+- general class files including the blast tutorial
+	- blast-tutorial
+		- files created from conducting the blast tutorial in GitBash
+		- completed Oct 11 2018
+		- contains text file of command line coding
+		- contains Jupyter notebook for running the tutorial
+		- contains subdirectories: analyses for blast analysis, db for data downloads, and query for data queries.
+-  Data
+	-  contains raw data files
+	-  original data fastq too big for GitHub
+-  Analyses
+	-  contains files created for analysis of data
+	-  currently contains html output of FastQC
+-  Notebooks
+	-  contains Jupyter notebooks documenting steps in the process.
 ## Programs Used
 - FastQC 
 	- requires java
