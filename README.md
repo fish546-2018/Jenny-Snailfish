@@ -36,3 +36,4 @@ Week 5 goals: Become familiar with new programs and begin running basic analyses
 - FastQC 
 	- requires java
 - Trim Galore
+- Stacks
