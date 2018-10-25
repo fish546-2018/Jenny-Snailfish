@@ -29,5 +29,10 @@ Week 5 goals: Become familiar with new programs and begin running basic analyses
 			-  original data fastq too big for GitHub
 		-  Analyses
 			-  contains files created for analysis of data
+			-  currently contains html output of FastQC
 		-  Notebooks
-			-  contains Jupyter notebooks documenting steps in the process.    
+			-  contains Jupyter notebooks documenting steps in the process.
+##Programs Used
+- FastQC 
+	- requires java
+- Trim Galore
