@@ -1,0 +1,236 @@
+
+Jenny@Jenny MINGW64 ~
+$ whoami
+Jenny
+
+Jenny@Jenny MINGW64 ~
+$ pwd
+/c/Users/Jenny
+
+Jenny@Jenny MINGW64 ~
+$ cd Desktop/shell-novice/data/users/nelle/
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle
+$ ls
+creatures/  data/  Desktop/  molecules/  north-pacific-gyre/  notes.txt  pizza.cfg  solar.pdf  writing/
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle
+$ ls -F
+creatures/  data/  Desktop/  molecules/  north-pacific-gyre/  notes.txt  pizza.cfg  solar.pdf  writing/
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle
+$ ls -F data/
+amino-acids.txt  elements/  morse.txt  pdb/  planets.txt  sunspot.txt
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle
+$ ls -F /data
+ls: cannot access '/data': No such file or directory
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle
+$ pwd
+/c/Users/Jenny/Desktop/shell-novice/data/users/nelle
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle
+$ ls
+creatures/  data/  Desktop/  molecules/  north-pacific-gyre/  notes.txt  pizza.cfg  solar.pdf  writing/
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle
+$ cd data/
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle/data
+$ pwd
+/c/Users/Jenny/Desktop/shell-novice/data/users/nelle/data
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle/data
+$ ls -F
+amino-acids.txt  elements/  morse.txt  pdb/  planets.txt  sunspot.txt
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle/data
+$ cd ~/Desktop/shell-novice/data/users/nelle/
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle
+$ cd -
+/c/Users/Jenny/Desktop/shell-novice/data/users/nelle/data
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle/data
+$ cd ..
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle
+$ pwd
+/c/Users/Jenny/Desktop/shell-novice/data/users/nelle
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle
+$ ls -F -a
+./  ../  .bash_profile  creatures/  data/  Desktop/  molecules/  north-pacific-gyre/  notes.txt  pizza.cfg  solar.pdf  writing/
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle
+$ ls north-pacific-gyre/2012-07-03/
+goodiff   NENE01729A.txt  NENE01736A.txt  NENE01751B.txt  NENE01843A.txt  NENE01971Z.txt  NENE01978B.txt  NENE02040A.txt  NENE02040Z.txt  NENE02043B.txt
+goostats  NENE01729B.txt  NENE01751A.txt  NENE01812A.txt  NENE01843B.txt  NENE01978A.txt  NENE02018B.txt  NENE02040B.txt  NENE02043A.txt
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle
+$ pwd
+/c/Users/Jenny/Desktop/shell-novice/data/users/nelle
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle
+$ ls -F
+creatures/  data/  Desktop/  molecules/  north-pacific-gyre/  notes.txt  pizza.cfg  solar.pdf  writing/
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle
+$ mkdir thesis
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle
+$ ls -F
+creatures/  data/  Desktop/  molecules/  north-pacific-gyre/  notes.txt  pizza.cfg  solar.pdf  thesis/  writing/
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle
+$ ls -F thesis
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle
+$ cd thesis/
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle/thesis
+$ nano draft.txt
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle/thesis
+$ ls
+draft.txt
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle/thesis
+$ rm draft.txt
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle/thesis
+$ ls
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle/thesis
+$ ls ..
+creatures/  data/  Desktop/  molecules/  north-pacific-gyre/  notes.txt  pizza.cfg  solar.pdf  thesis/  writing/
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle/thesis
+$ ls ../molecules/
+cubane.pdb  ethane.pdb  lengths  methane.pdb  octane.pdb  pentane.pdb  propane.pdb  sorted-lengths
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle/thesis
+$ cd ../molecules/
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle/molecules
+$ wc *.pbd
+wc: '*.pbd': No such file or directory
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle/molecules
+$ wc *pdb
+  20  156 1158 cubane.pdb
+  12   84  622 ethane.pdb
+   9   57  422 methane.pdb
+  30  246 1828 octane.pdb
+  21  165 1226 pentane.pdb
+  15  111  825 propane.pdb
+ 107  819 6081 total
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle/molecules
+$ wc -l *.pdb
+  20 cubane.pdb
+  12 ethane.pdb
+   9 methane.pdb
+  30 octane.pdb
+  21 pentane.pdb
+  15 propane.pdb
+ 107 total
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle/molecules
+$ wc -l *.pdb >lengths
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle/molecules
+$ ls lengths
+lengths
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle/molecules
+$ cat lengths
+  20 cubane.pdb
+  12 ethane.pdb
+   9 methane.pdb
+  30 octane.pdb
+  21 pentane.pdb
+  15 propane.pdb
+ 107 total
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle/molecules
+$ sort lengths
+   9 methane.pdb
+  12 ethane.pdb
+  15 propane.pdb
+  20 cubane.pdb
+  21 pentane.pdb
+  30 octane.pdb
+ 107 total
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle/molecules
+$ sort lengths > sorted-lengths
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle/molecules
+$ head -1 sorted-lengths
+   9 methane.pdb
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle/molecules
+$ sort -n lengths | head -1
+   9 methane.pdb
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle/molecules
+$ wc -l *,pdb | sort -n | head -1
+wc: '*,pdb': No such file or directory
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle/molecules
+$ wc -l *.pdb | sort -n | head -1
+   9 methane.pdb
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle/molecules
+$ cd ../north-pacific-gyre/2012-07-03/
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle/north-pacific-gyre/2012-07-03
+$ wc -l *.txt
+  300 NENE01729A.txt
+  300 NENE01729B.txt
+  300 NENE01736A.txt
+  300 NENE01751A.txt
+  300 NENE01751B.txt
+  300 NENE01812A.txt
+  300 NENE01843A.txt
+  300 NENE01843B.txt
+  300 NENE01971Z.txt
+  300 NENE01978A.txt
+  300 NENE01978B.txt
+  240 NENE02018B.txt
+  300 NENE02040A.txt
+  300 NENE02040B.txt
+  300 NENE02040Z.txt
+  300 NENE02043A.txt
+  300 NENE02043B.txt
+ 5040 total
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle/north-pacific-gyre/2012-07-03
+$ wc -l *.txt | sort -n | head -5
+  240 NENE02018B.txt
+  300 NENE01729A.txt
+  300 NENE01729B.txt
+  300 NENE01736A.txt
+  300 NENE01751A.txt
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle/north-pacific-gyre/2012-07-03
+$ wc -l *.txt | sort -n | tail -5
+  300 NENE02040B.txt
+  300 NENE02040Z.txt
+  300 NENE02043A.txt
+  300 NENE02043B.txt
+ 5040 total
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle/north-pacific-gyre/2012-07-03
+$ ls *Z.txt
+NENE01971Z.txt  NENE02040Z.txt
+
+Jenny@Jenny MINGW64 ~/Desktop/shell-novice/data/users/nelle/north-pacific-gyre/2012-07-03
+$ wc -l *[AB].txt | sort -n | tail -5
+  300 NENE02040A.txt
+  300 NENE02040B.txt
+  300 NENE02043A.txt
+  300 NENE02043B.txt
+ 4440 total

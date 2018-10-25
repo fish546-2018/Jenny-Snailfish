@@ -1,0 +1,64 @@
+    1  whoami
+    2  pwd
+    3  ls
+    4  cd Desktop/shell-novice/data/
+    5  pwd
+    6  cd ..
+    7  cd data/
+    8  cd ../..
+    9  cd shell-novice/data/
+   10  ls
+   11  cd data/
+   12  ls
+   13  ls -F
+   14  cd ..
+   15  ls
+   16  cd users/
+   17  ls
+   18  cd nelle/
+   19  ls
+   20  cd north-pacific-gyre/
+   21  ls
+   22  cd 2012-07-03/
+   23  ls
+   24  ls /c/Users/Jenny/Desktop/shell-novice/data/users/nelle/
+   25  cd ../../data/
+   26  ls -F
+   27  cd ../writing/thesis/
+   28  nano draft.txt
+   29  ls
+   30  cat draft.txt 
+   31  nano draft.txt
+   32  cat draft.txt 
+   33  rm draft.txt 
+   34  ls
+   35  rm -i empty-draft.md 
+   36  ls ../../
+   37  cd ../../molecules/
+   38  ls -F
+   39  ls cubane.pdb 
+   40  cat cubane.pdb 
+   41  wc *.pdb
+   42  wc -l *.pdb
+   43  wc -l *.pdb >lengths
+   44  ls
+   45  cat lengths 
+   46  echo "oops" >lengths 
+   47  cat lengths 
+   48  wc -l *.pdb >lengths
+   49  cat lengths
+   50  sort -n lengths 
+   51  sort lengths 
+   52  sort -nr
+   53  sort -nr lengths 
+   54  sort h
+   55  sort -h
+   56  man sort
+   57  sort -n lengths >sorted-lengths
+   58  ls
+   59  cat sorted-lengths 
+   60  head -1 sorted-lengths 
+   61  sort -n lengths | head -1
+   62  wc -l *.pdb | sort -n | head -1
+   63  history
+   64  history > /G/My\ Drive/Grad\ School/A\ 2018-\ Su\ 2019/Bioinformatics/shell-tutorial
