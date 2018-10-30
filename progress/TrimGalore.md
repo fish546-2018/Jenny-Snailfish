@@ -1,5 +1,7 @@
-# Installing Trim Galore
-##10/26/18
+# Trim Galore
+
+## Installing Trim Galore
+### 10/26/18
 This details how I installed Trim Galore on the FishLab3 Desktop
 
 ### Step 1:
@@ -19,5 +21,11 @@ Added to system path using GUI following directions [here](https://www.howtogeek
 Verified it worked with
 	cutadapt --help
 
-### Step 3:
-Attempt to run from Jupyter notebook
+## Using Trim Galore
+## 10/26-10/30/18
+### Step 1:
+Run Trim Galore from Jupyter notebook (note: it took > 1 hr to run on desktop computer, unsure on exact time as I left it to run over the weekend)
+Started run 10/26, ran with default settings, see Data-QT-dktp for code and run output.
+
+### Step 2:
+Started FastQC run on trimmed data to compare differences between trimmed and untrimmed data.
