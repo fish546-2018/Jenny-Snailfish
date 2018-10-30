@@ -24,7 +24,7 @@ Verified it worked with
 ## Using Trim Galore
 ## 10/26-10/30/18
 ### Step 1:
-Run Trim Galore from Jupyter notebook (note: it took > 1 hr to run on desktop computer, unsure on exact time as I left it to run over the weekend)
+Run Trim Galore from Jupyter notebook (note: it took > 2 hr to run on desktop computer, 129 min according to Trim Galore summary)
 Started run 10/26, ran with default settings, see Data-QT-dktp for code and run output.
 
 ### Step 2:
