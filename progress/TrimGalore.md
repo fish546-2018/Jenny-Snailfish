@@ -29,3 +29,4 @@ Started run 10/26, ran with default settings, see Data-QT-dktp for code and run 
 
 ### Step 2:
 Started FastQC run on trimmed data to compare differences between trimmed and untrimmed data.
+Based on FastQC on trimmed data, appears I need to manually trim bases.
