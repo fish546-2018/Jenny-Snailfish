@@ -11,9 +11,17 @@ This project will be working with RADSeq data from snailfishes. This data set wa
 3. Construct a phylogeny of all species
 4. Construct a phylogeny of groups of closely related species that aren't fully resolved on the full tree.
 ### Project Timeline
-Week 3: Organize repository and gain access to data  
-Week 4: Have data downloaded, inspected, and trim low quality bases. Install programs needed for further analysis/phylogeny construction.  
-Week 5 goals: Become familiar with new programs and begin running basic analyses.
+**Week 3**: Organize repository and gain access to raw data **DONE**  
+**Week 4**: Have data downloaded, inspected, and trimmed low quality bases. **DONE**     
+**Week 5**: Install Stacks, very common pipeline for analyzing RADSeq data **DONE***  
+*Note installing Stacks was extremely time intensive, see [Markdown File]()  
+**Week 6**: Demultiplex data, and trim barcodes and restriction site overhang as well as low quality ends. Determine script to count number of filtered reads and filter those too low or too high.  
+**Week 7**: Determine number of loci to keep, compare across whole data set as well as within smaller groups. Export kept loci for each individual.  
+**Week 8**: Construct a maximum likelihood phylogeny using Ape package in R  
+**Week 9**: If time, derive SNP database using ipyrad and create phylogeny.  
+**Week 10**: Compare all outputs. Was I able to recreate the same phylogeny as my coauthors using Stacks? Did the phylogeny based on SNPs from ipyrad differ from either Stacks phylogeny?
+
+###Notes  
 ## Directories:  
 - xFISH546
 	- general class files including tutorials and class notes
@@ -41,9 +49,10 @@ Week 5 goals: Become familiar with new programs and begin running basic analyses
 -  Notebooks
 	-  contains Jupyter notebooks documenting steps in the process
 	-  
-## Programs Used
+## Programs Used/ Plan to Use
 - FastQC 
 	- requires java
 - Trim Galore
 	- requires Cutadapt (which requires Microsoft C++)
 - Stacks
+- ipyrad
