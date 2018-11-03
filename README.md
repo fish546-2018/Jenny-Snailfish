@@ -14,7 +14,7 @@ This project will be working with RADSeq data from snailfishes. This data set wa
 **Week 3**: Organize repository and gain access to raw data **DONE**  
 **Week 4**: Have data downloaded, inspected, and trimmed low quality bases. **DONE**     
 **Week 5**: Install Stacks, very common pipeline for analyzing RADSeq data **DONE***  
-*Note installing Stacks was extremely time intensive, see [Markdown File]()  
+*Note installing Stacks was extremely time intensive, see [Markdown File](https://github.com/fish546-2018/Jenny-Snailfish/blob/master/progress/InstallingStacks.md)  
 **Week 6**: Demultiplex data, and trim barcodes and restriction site overhang as well as low quality ends. Determine script to count number of filtered reads and filter those too low or too high.  
 **Week 7**: Determine number of loci to keep, compare across whole data set as well as within smaller groups. Export kept loci for each individual.  
 **Week 8**: Construct a maximum likelihood phylogeny using Ape package in R  
