@@ -11,9 +11,3 @@ xFISH546/blast-tutorial/db/uniprot_sprot_r2018_08.psq
 analyses/1078_S1_L001_R1_001_trimmed.fq
 data/1078_S1_L001_R1_001_trimmed.fq
 Anaconda3-5.3.0-Linux-x86_64.sh
-<<<<<<< HEAD
-*.fq
-*.zip
-=======
-xFISH546/ScriptQuiz/Stack105700.Naso unicornis.zip
->>>>>>> cfdd08d265f7b613833a223eef37760ab153f8b5
