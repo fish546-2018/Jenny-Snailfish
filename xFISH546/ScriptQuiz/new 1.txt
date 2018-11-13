@@ -1,6 +1,0 @@
-if test "!" -d ./ToUpload
-then
-	mkdir ./ToUpload
-else
-	echo "ToUpload exists"
-fi
