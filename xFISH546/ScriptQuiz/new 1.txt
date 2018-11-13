@@ -1,0 +1,3 @@
+if test "!" -d ./ToUpload
+mkdir ./ToUpload
+fi
