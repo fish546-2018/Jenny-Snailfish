@@ -4,7 +4,12 @@ set -u
 set -o pipefail
 mkdir ./zips
 mkdir ./unzip
-mkdir ./ToUpload
+if test "!" -d ./ToUpload
+then
+	mkdir ./ToUpload
+else
+	echo "ToUpload exists"
+fi
 curl eagle.fish.washington.edu/fish546/jenny/Stack105700.Naso%20unicornis.zip > ./zips/Stack1.zip
 unzip ./zips/Stack1.zip -d ./unzip/
 if test -f ./unzip/Info.txt
