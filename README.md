@@ -20,9 +20,9 @@ For snailfishes, how does a phylogeny based on many single nucleotide polymorphi
 **Week 4**: Have data downloaded, inspected using FastQC, and trimmed using Trim Galore. **DONE**     
 **Week 5**: Install Stacks, very common pipeline for analyzing RADSeq data **DONE**  
 *Note installing Stacks was extremely time intensive, see [InstallingStacks](https://github.com/fish546-2018/Jenny-Snailfish/blob/master/progress/InstallingStacks.md)*  
-**Week 6**: Demultiplex data, and trim barcodes. Step completed but results didn't save due to Virtual Machine running out of space
-**Week 7**: Resolve issues with virtual machine running out of space, by deleting all non-essential things and removing shared folders. Accessed data from external harddrive instead
-**Week 8**: Rerun `process_radtags` now that VM issues are resolved.
+**Week 6**: Demultiplex data, and trim barcodes. Step completed but results didn't save due to Virtual Machine running out of space  
+**Week 7**: Resolve issues with virtual machine running out of space, by deleting all non-essential things and removing shared folders. Accessed data from external harddrive instead  
+**Week 8**: Rerun `process_radtags` now that VM issues are resolved.  
 
 **Upcoming**  
 **Week 9**: Filter by read count. Determine number of loci to keep, compare across whole data set as well as within smaller groups. Construct a maximum likelihood phylogeny using Ape package in R.  
