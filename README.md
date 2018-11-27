@@ -30,7 +30,7 @@ For snailfishes, how does a phylogeny based on many single nucleotide polymorphi
 
 
 ## Repository Structure:
-Detailed repository structure can be found [here]()
+Detailed repository structure can be found [here](https://github.com/fish546-2018/Jenny-Snailfish/blob/master/RepoOrg.md)
 
 ## Programs Used for Data Processing
 - FastQC 
