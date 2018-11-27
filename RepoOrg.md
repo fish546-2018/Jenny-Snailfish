@@ -1,0 +1,28 @@
+# Repository Structure
+- xFISH546
+	- general class files including tutorials and class notes
+	- blast-tutorial
+		- files created from conducting the blast tutorial in GitBash
+		- contains text file of command line coding
+		- contains Jupyter notebook for running the tutorial
+		- contains subdirectories: analyses for blast analysis, db for data downloads, and query for data queries.
+	- notebooks
+		- contains Jupyter notebooks about general troubleshooting done for making Bash and Windows get along.
+	-  notes
+		-  notes from each week of class
+	-  screenshots
+		-  screenshots taken for posting on class issues
+	-  shell-novice
+		-  files from the bash shell tutorial
+		-  two text files with commands from the tutorial
+		-  data -> file downloaded for use with the bash tutorial
+-  Data
+	-  contains raw data file and checksum for it
+	-  *original data fastq too big for GitHub*
+-  Analyses
+	-  contains files created for analysis of data
+	-  currently contains html and zip output of FastQC
+-  Notebooks
+	-  contains Jupyter notebooks documenting steps in the process
+-  Progress  
+	-  contains markdown files documenting weekly progress as well as documenting major points of slowdown and the reasons behind them
