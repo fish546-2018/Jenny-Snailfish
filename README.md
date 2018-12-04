@@ -28,7 +28,7 @@ How do I use the command line to automate downloading and renaming CT scanning f
 **Week 5**: Install Stacks, very common pipeline for analyzing RADSeq data  
 *Note installing Stacks was extremely time intensive, see [InstallingStacks](https://github.com/fish546-2018/Jenny-Snailfish/blob/master/progress/InstallingStacks.md)*   
 **Week 6**: Demultiplex data, and trim barcodes. Step completed but results didn't save due to Virtual Machine running out of space.  
-*Pivot to writing script for automating CT data downloading*
+*Pivot to writing script for automating CT data downloading*  
 **Week 7**: Resolve issues with virtual machine running out of space, by deleting all non-essential things and removing shared folders. Accessed data from external harddrive instead.  
 *Finish script for CT downloading, make it work with already written batch uploading script*  
 **Week 8**: Rerun `process_radtags` now that VM issues are resolved.    
