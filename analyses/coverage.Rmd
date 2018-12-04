@@ -1,0 +1,62 @@
+---
+title: "ustacks_coverage"
+author: "Jennifer Gardner"
+date: "December 4, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# Load Data
+```{r}
+ustacks <- read.csv(file = "analyses/ustacks.csv", header = TRUE)
+popmap <- read.delim("data/popmap.txt", header = FALSE)
+head(popmap)
+```
+
+# Plot coverage
+```{r}
+plotdata <- ustacks[order(ustacks$SampleName),]
+head(plotdata)
+```
+Attach population dataframe
+```{r}
+plotdata <- cbind(popmap$V2, plotdata)
+colnames(plotdata) <- c("Pop",colnames(ustacks))
+head(plotdata)
+```
+
+Look at read number.
+```{r}
+barplot(plotdata$n_reads, col = plotdata$Pop)
+```
+
+Ammend data to include only those with ove 1000000 reads
+```{r}
+plotdata.high <- plotdata[plotdata$n_reads >= 1e6,]
+barplot(plotdata.high$n_reads, col = plotdata.high$Pop, ylim = c(0,2e6))
+abline(h=1e6, col = "white")
+```
+rerun reads and coverage by pop with ammended data
+```{r}
+popreadsh <- tapply(plotdata.high$n_reads, plotdata.high$Pop, mean)
+popreadsh.sd <- tapply(plotdata.high$n_reads, plotdata.high$Pop, sd)
+bp <- barplot(popreadsh, col = rainbow(28), ylim=c(0,2e6))
+arrows(x0=bp, y0=(popreadsh-(2*popreadsh.sd)), 
+         x1=bp, y1=(popreadsh+(2*popreadsh.sd)), 
+         length = .03, angle = 90, code=3, lwd=1)
+abline(h=1e6, col = "white")
+```
+Each population now had well over 1mil reads.
+```{r}
+popcovh <- tapply(plotdata.high$percentage, plotdata.high$Pop, mean)
+popcovh.sd <- tapply(plotdata.high$percentage, plotdata.high$Pop, sd)
+bp <- barplot(popcovh, col = rainbow(28), ylim=c(0,100))
+arrows(x0=bp, y0=(popcovh-(2*popcovh.sd)), 
+         x1=bp, y1=(popcovh+(2*popcovh.sd)), 
+         length = .03, angle = 90, code=3, lwd=1)
+abline(h=75, col = "white", lwd = 3)
+```
+
+Poulation coverage is over 75% for the majority of populations
