@@ -35,4 +35,3 @@ Detailed repository structure can be found [here](https://github.com/fish546-201
 - Trim Galore
 	- requires Cutadapt (which requires Microsoft C++)
 - Stacks
-- R (Ape package)
