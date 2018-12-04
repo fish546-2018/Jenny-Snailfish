@@ -39,8 +39,12 @@ How do I use the command line to automate downloading and renaming CT scanning f
 Detailed repository structure can be found [here](https://github.com/fish546-2018/Jenny-Snailfish/blob/master/RepoOrg.md)
 
 ## Programs Used for Data Processing
+- Anaconda
 - FastQC 
 	- requires java
 - Trim Galore
 	- requires Cutadapt (which requires Microsoft C++)
-- Stacks
+- Stacks  
+**Bonus for CT Processing**  
+- idigbio wrapper  
+- pandas
