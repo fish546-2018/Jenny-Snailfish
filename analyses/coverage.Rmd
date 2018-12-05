@@ -8,11 +8,27 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+# Load Dependencies
+```{r}
+library(RColorBrewer)
+```
+
 # Load Data
 ```{r}
-ustacks <- read.csv(file = "analyses/ustacks.csv", header = TRUE)
-popmap <- read.delim("data/popmap.txt", header = FALSE)
+ustacks <- read.csv(file = "ustacks.csv", header = TRUE)
+popmap <- read.delim("popmap.txt", header = FALSE)
 head(popmap)
+```
+# Get plot colors
+```{r}
+set3 <- brewer.pal(n = 12, "Set3")
+set2 <- brewer.pal(n = 8, "Accent")
+set1 <- brewer.pal(n = 8, "Paired")
+popcols <- c(set3, set2, set1)
+```
+Ammend Plot colors to Popmap
+```{r}
+popcolsplots <- popcols[popmap[,2]]
 ```
 
 # Plot coverage
@@ -29,32 +45,37 @@ head(plotdata)
 
 Look at read number.
 ```{r}
-barplot(plotdata$n_reads, col = plotdata$Pop)
+plot(type="n", x=1, y=1, xlim=c(0,52), ylim=c(0,2e6), xaxt="n", yaxt="n", xlab="Individuals",ylab="Number of Reads", bty="l")
+x<- barplot(plotdata$n_reads, add=T, axes= T, col=popcolsplots)
 ```
 
 Ammend data to include only those with ove 1000000 reads
 ```{r}
 plotdata.high <- plotdata[plotdata$n_reads >= 1e6,]
-barplot(plotdata.high$n_reads, col = plotdata.high$Pop, ylim = c(0,2e6))
-abline(h=1e6, col = "white")
+popcolshigh <- popcols[plotdata.high$Pop]
+plot(type = "n", x=1, y=1, xlim=c(0,46), ylim=c(0,2e6), xaxt="n", yaxt="n", xlab = "Individuals", ylab = "Number of Reads", bty="l")
+x<- barplot(plotdata.high$n_reads, col = popcolshigh, add = T)
 ```
 rerun reads and coverage by pop with ammended data
 ```{r}
 popreadsh <- tapply(plotdata.high$n_reads, plotdata.high$Pop, mean)
 popreadsh.sd <- tapply(plotdata.high$n_reads, plotdata.high$Pop, sd)
-bp <- barplot(popreadsh, col = rainbow(28), ylim=c(0,2e6))
+popcolsh <- unique(popcolshigh)
+plot(type = "n", x=1, y=1, xlim=c(0,30), ylim=c(0,2e6), xaxt="n", yaxt="n", xlab = "Populations", ylab = "Number of Reads", bty="l")
+bp <- barplot(popreadsh, col = popcolsh, add = TRUE)
 arrows(x0=bp, y0=(popreadsh-(2*popreadsh.sd)), 
          x1=bp, y1=(popreadsh+(2*popreadsh.sd)), 
          length = .03, angle = 90, code=3, lwd=1)
-abline(h=1e6, col = "white")
+abline(h=1.5e6, col = "white", lwd = 5, lty = 3)
+abline(h=1e6, col = "white", lwd = 5, lty = 3)
 ```
-Each population now had well over 1mil reads.
+Each population now has well over 1mil reads.
 ```{r}
 popcovh <- tapply(plotdata.high$percentage, plotdata.high$Pop, mean)
-popcovh.sd <- tapply(plotdata.high$percentage, plotdata.high$Pop, sd)
-bp <- barplot(popcovh, col = rainbow(28), ylim=c(0,100))
-arrows(x0=bp, y0=(popcovh-(2*popcovh.sd)), 
-         x1=bp, y1=(popcovh+(2*popcovh.sd)), 
+plot(type = "n", x=1, y=1, xlim=c(0,30), ylim=c(0,100), xaxt="n", yaxt="n", xlab = "Populations", ylab = "Coverage", bty="l")
+bp <- barplot(popcovh, col = popcolsh, add = TRUE)
+arrows(x0=bp, y0=(popcovh-(2*popcovh.sd)),
+         x1=bp, y1=(popcovh+(2*popcovh.sd)),
          length = .03, angle = 90, code=3, lwd=1)
 abline(h=75, col = "white", lwd = 3)
 ```
