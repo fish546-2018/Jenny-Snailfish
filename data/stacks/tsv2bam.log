@@ -1,0 +1,8 @@
+tsv2bam v2.2, executed 2018-12-04 14:31:59
+tsv2bam --in-dir stacks/ -s Lflorae666-cap
+Configuration for this run:
+  Stacks directory: 'stacks/'
+  Num. samples: 1
+
+Loading the catalog...
+Processing sample 'Lflorae666-cap'...

@@ -1,0 +1,17 @@
+populations v2.2, executed 2018-12-04 13:35:06
+populations -P ./stacks/ -M ./sampleI/popmap.txt -k -p 20 -r 0.5 -t 36 --fasta
+Locus/sample distributions will be written to './stacks/populations.log.distribs'.
+populations parameters selected:
+  Percent samples limit per population: 0.5
+  Locus Population limit: 20
+  Log liklihood filtering: off; threshold: 0
+  Minor allele frequency cutoff: 0
+  Maximum observed heterozygosity cutoff: 1
+  Applying Fst correction: none.
+  Pi/Fis kernel smoothing: on
+  Fstats kernel smoothing: on
+  Bootstrap resampling: off
+
+Parsing population map...
+The population map contained 44 samples, 28 population(s), 1 group(s).
+Failed to open gzipped file './stacks/catalog.fa.gz': No such file or directory.
