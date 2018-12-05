@@ -60,3 +60,9 @@ abline(h=75, col = "white", lwd = 3)
 ```
 
 Poulation coverage is over 75% for the majority of populations
+Make list of samples to exclude from downstream analaysis
+```{r}
+toexclude <- as.vector(plotdata[plotdata$n_reads < 1e6,2])
+write.csv(toexclude, file = "toexclude.csv", row.names = FALSE)
+```
+
