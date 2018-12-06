@@ -21,8 +21,7 @@
 	-  also contains outputs from stacks pipeline in stackspl subdirectory
 	-  *original data fastq too big for GitHub*
 -  Analyses
-	-  contains files created for analysis of data
-	-  includes FASTQC results
+	-  contains files created for visualization of data in R
 -  Notebooks
 	-  contains Jupyter notebooks documenting steps in the process
 -  Progress  
