@@ -17,12 +17,14 @@
 		-  two text files with commands from the tutorial
 		-  data -> file downloaded for use with the bash tutorial
 -  Data
-	-  contains raw data file and checksum for it
+	-  contains raw data file and checksums
+	-  also contains outputs from stacks pipeline in stackspl subdirectory
 	-  *original data fastq too big for GitHub*
 -  Analyses
 	-  contains files created for analysis of data
-	-  currently contains html and zip output of FastQC
+	-  includes FASTQC results
 -  Notebooks
 	-  contains Jupyter notebooks documenting steps in the process
 -  Progress  
 	-  contains markdown files documenting weekly progress as well as documenting major points of slowdown and the reasons behind them
+	-  contains images and files for Final presentation
