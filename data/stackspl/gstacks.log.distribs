@@ -1,0 +1,108 @@
+# Note: Individual distributions can be extracted using the `stacks-dist-extract` utility.
+#       e.g. `stacks-dist-extract gstacks.log.distribs dist_name`
+
+BEGIN effective_coverages_per_sample
+# For mean_cov_ns, the coverage at each locus is weighted by the number of
+# samples present at that locus (i.e. coverage at shared loci counts more).
+sample	n_loci	n_used_fw_reads	mean_cov	mean_cov_ns
+Ajordan521-cap	40468	1561301	38.581	42.974
+Ajordan522-cap	41067	1512475	36.829	41.371
+Ajordani86-cap	39396	1694266	43.006	47.799
+Ajordani89-cap	38597	1631552	42.271	47.029
+Aungak696-cap	38996	1620157	41.547	45.535
+Ccandidus-cap	40700	1642193	40.349	45.973
+Ccfcypselur-cap	40958	1591421	38.855	44.605
+Ccfmelanu1-cap	37213	1696740	45.595	50.073
+Ccfmelanu2-cap	38301	1710809	44.667	49.274
+Ccomus970-cap	39869	1577395	39.564	44.166
+Ccomus971-cap	41119	1587212	38.600	44.053
+Cfurcellu98-cap	38245	1631977	42.672	47.076
+Cgilberti81-cap	37218	1619638	43.518	47.241
+Cmelanu88	33468	1214217	36.280	41.036
+Cphasma07-cap	39587	1692502	42.754	47.738
+Cphasma61-cap	42052	1674131	39.811	46.138
+Crystalli1	48002	1258915	26.226	32.643
+Crystalli2-cap	46868	1501350	32.034	39.171
+Cscottae02-cap	38843	1673976	43.096	47.070
+Cscottae04-cap	36390	1667128	45.813	48.520
+Cstauffe96-cap	37803	1584866	41.924	45.327
+Ebritti822-cap	38864	1637735	42.140	44.092
+Ecaudatus1-cap	42073	1711527	40.680	46.611
+Ecaudatus2-cap	38096	1735957	45.568	48.825
+Ecaudatus3	42848	1199361	27.991	32.981
+Ecaudatus4-cap	37335	1683970	45.104	48.276
+Eorbis461-cap	41416	1624694	39.229	42.833
+Eorbis821-cap	37534	1606708	42.807	43.958
+Lferxi9829-cap	36503	1712194	46.906	51.244
+Lflorae666-cap	39239	1582209	40.322	44.562
+Lgibbus043-cap	44211	1621945	36.686	43.041
+Lgibbus176-cap	40818	1652712	40.490	44.456
+Lnanus2476-cap	39788	1636103	41.121	47.954
+Npelagicus-cap	41490	1520817	36.655	42.254
+Pdactyl51-cap	38456	1645509	42.789	47.559
+Ppenicillu-cap	40095	1556074	38.810	44.253
+Pptychoman-cap	37828	1630781	43.110	46.578
+Pulochir76	38582	1387417	35.960	39.840
+Rattenuatu-cap	40827	1445692	35.410	39.510
+END effective_coverages_per_sample
+
+BEGIN phasing_rates_per_sample
+sample	n_gts	n_multisnp_hets	n_phased	misphasing_rate
+Ajordan521-cap	31094	3188	3019	0.053
+Ajordan522-cap	31163	3353	3112	0.072
+Ajordani86-cap	29754	2720	2588	0.049
+Ajordani89-cap	29425	3197	3053	0.045
+Aungak696-cap	30830	3683	3507	0.048
+Ccandidus-cap	29641	4092	3913	0.044
+Ccfcypselur-cap	29575	1894	1700	0.102
+Ccfmelanu1-cap	28283	520	418	0.196
+Ccfmelanu2-cap	29022	792	668	0.157
+Ccomus970-cap	29502	4344	4158	0.043
+Ccomus971-cap	29822	4373	4197	0.040
+Cfurcellu98-cap	29409	1506	1246	0.173
+Cgilberti81-cap	29264	2507	2367	0.056
+Cmelanu88	23032	473	398	0.159
+Cphasma07-cap	30536	2910	2758	0.052
+Cphasma61-cap	30501	2820	2691	0.046
+Crystalli1	24525	959	860	0.103
+Crystalli2-cap	24752	746	680	0.088
+Cscottae02-cap	29206	1425	1300	0.088
+Cscottae04-cap	28548	1320	1208	0.085
+Cstauffe96-cap	26220	1562	1500	0.040
+Ebritti822-cap	18842	1174	1135	0.033
+Ecaudatus1-cap	29049	2579	2225	0.137
+Ecaudatus2-cap	27728	2029	1882	0.072
+Ecaudatus3	27650	2613	2390	0.085
+Ecaudatus4-cap	27995	2382	2226	0.065
+Eorbis461-cap	19632	2687	2654	0.012
+Eorbis821-cap	18481	1220	1166	0.044
+Lferxi9829-cap	24299	2033	1972	0.030
+Lflorae666-cap	19647	2014	1976	0.019
+Lgibbus043-cap	25205	2315	2223	0.040
+Lgibbus176-cap	23851	2327	2276	0.022
+Lnanus2476-cap	23163	2248	2201	0.021
+Npelagicus-cap	18902	3295	3263	0.010
+Pdactyl51-cap	27354	3917	3796	0.031
+Ppenicillu-cap	24770	2971	2903	0.023
+Pptychoman-cap	25710	1991	1910	0.041
+Pulochir76	24227	2221	2167	0.024
+Rattenuatu-cap	25386	4163	4095	0.016
+END phasing_rates_per_sample
+
+BEGIN clockings
+Num. threads: 4
+Parallel time: 286.7
+Average thread time spent:
+    34.9  reading (12.2%)
+   145.2  processing (50.7%)
+            28.0  counting nucleotides (9.7%)
+            11.6  genotyping (4.1%)
+             1.1  haplotyping (0.4%)
+            12.3  computing consensus (4.3%)
+            86.2  building_vcf (30.1%)
+     6.5  writing_fa (2.3%)
+   100.0  writing_vcf (34.9%)
+     0.3  clocking (0.1%)
+Total time spent writing vcf: 106.6 (37.2%)
+VCFwrite block size: mean=1.6(n=387027); max=73
+END clockings

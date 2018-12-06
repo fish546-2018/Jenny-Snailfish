@@ -1,0 +1,196 @@
+# Note: Individual distributions can be extracted using the `stacks-dist-extract` utility.
+#       e.g. `stacks-dist-extract populations.log.distribs dist_name`
+
+BEGIN batch_progress
+Batch 1: analyzed 10000 loci; filtered 20525 loci; 30525 loci seen.
+    Calculating F statistics...done.
+    Notice: Smoothing was requested (-k), but will not be performed as the loci are not ordered.
+Batch 2: analyzed 5777 loci; filtered 602105 loci; 607882 loci seen.
+    Calculating F statistics...done.
+    Notice: Smoothing was requested (-k), but will not be performed as the loci are not ordered.
+END batch_progress
+
+BEGIN samples_per_loc_prefilters
+# Distribution of valid samples matched to a catalog locus prior to filtering.
+n_samples	n_loci
+0	638407
+END samples_per_loc_prefilters
+
+BEGIN missing_samples_per_loc_prefilters
+
+# Distribution of missing samples for each catalog locus prior to filtering.
+# Absent samples at locus	Count
+1	452290
+2	74622
+3	44469
+4	17344
+5	9301
+6	3876
+7	2657
+8	2403
+9	2117
+10	1911
+11	1602
+12	1376
+13	1383
+14	1348
+15	1332
+16	1156
+17	1157
+18	1118
+19	1168
+20	1129
+21	1089
+22	1022
+23	1111
+24	1101
+25	1077
+26	1019
+27	1043
+28	950
+29	963
+30	944
+31	880
+32	787
+33	726
+34	588
+35	447
+36	378
+37	281
+38	186
+39	56
+END missing_samples_per_loc_prefilters
+
+BEGIN snps_per_loc_prefilters
+# Distribution of the number of SNPs per catalog locus prior to filtering.
+n_snps	n_loci
+0	433965
+1	86623
+2	39212
+3	12558
+4	9249
+5	7388
+6	6092
+7	5428
+8	4871
+9	4330
+10	3839
+11	3064
+12	2680
+13	2421
+14	2155
+15	1928
+16	1839
+17	1563
+18	1442
+19	1265
+20	1128
+21	962
+22	849
+23	725
+24	568
+25	485
+26	404
+27	327
+28	247
+29	191
+30	144
+31	112
+32	92
+33	79
+34	61
+35	39
+36	28
+37	11
+38	17
+39	9
+40	9
+41	3
+43	2
+44	1
+47	1
+54	1
+END snps_per_loc_prefilters
+
+BEGIN samples_per_loc_postfilters
+# Distribution of valid samples matched to a catalog locus after filtering.
+n_samples	n_loci
+0	15777
+END samples_per_loc_postfilters
+
+BEGIN missing_samples_per_loc_postfilters
+
+# Distribution of missing samples for each catalog locus after filtering.
+# Absent samples at locus	Count
+20	1129
+21	1089
+22	1022
+23	1111
+24	1101
+25	1077
+26	1019
+27	1043
+28	950
+29	963
+30	944
+31	880
+32	787
+33	726
+34	588
+35	447
+36	378
+37	281
+38	186
+39	56
+END missing_samples_per_loc_postfilters
+
+BEGIN snps_per_loc_postfilters
+# Distribution of the number of SNPs per catalog locus (after filtering).
+n_snps	n_loci
+0	10
+1	37
+2	64
+3	120
+4	198
+5	303
+6	371
+7	478
+8	578
+9	706
+10	736
+11	796
+12	842
+13	894
+14	854
+15	884
+16	912
+17	830
+18	818
+19	773
+20	706
+21	619
+22	568
+23	518
+24	413
+25	354
+26	324
+27	237
+28	200
+29	142
+30	117
+31	86
+32	80
+33	57
+34	53
+35	35
+36	20
+37	13
+38	11
+39	6
+40	8
+41	1
+43	2
+44	1
+47	1
+53	1
+END snps_per_loc_postfilters
