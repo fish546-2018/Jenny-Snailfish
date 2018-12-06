@@ -1,0 +1,28 @@
+gstacks v2.2, executed 2018-12-05 12:47:21
+/usr/local/bin/gstacks -P ./stackspl -M ./sampleI/popmap1.txt -t 4
+Locus/sample distributions will be written to './stackspl/gstacks.log.distribs'.
+
+Configuration for this run:
+  Input mode: denovo
+  Population map: './sampleI/popmap1.txt'
+  Input files: 39, e.g. './stackspl/Ajordan521-cap.matches.bam'
+  Output to: './stackspl/'
+  Model: marukilow (var_alpha: 0.05, gt_alpha: 0.05)
+
+Reading BAM headers...
+Processing all loci...
+1%...
+2%...
+5%...
+10%...
+20%...
+50%...
+100%
+Input appears to be single-end (no paired-end reads were seen).
+
+Genotyped 638407 loci:
+  effective per-sample coverage: mean=44.7x, stdev=4.0x, min=32.6x, max=51.2x
+  mean number of sites per locus: 126.0
+  a consistent phasing was found for 87801 of out 92563 (94.9%) diploid loci needing phasing
+
+gstacks is done.

@@ -1,0 +1,56 @@
+populations v2.2, executed 2018-12-05 12:52:10
+/usr/local/bin/populations -P ./stackspl -M ./sampleI/popmap1.txt -t 4 -k -p 20 -r 0.5 --fasta
+Locus/sample distributions will be written to './stackspl/populations.log.distribs'.
+populations parameters selected:
+  Percent samples limit per population: 0.5
+  Locus Population limit: 20
+  Log liklihood filtering: off; threshold: 0
+  Minor allele frequency cutoff: 0
+  Maximum observed heterozygosity cutoff: 1
+  Applying Fst correction: none.
+  Pi/Fis kernel smoothing: on
+  Fstats kernel smoothing: on
+  Bootstrap resampling: off
+
+Parsing population map...
+The population map contained 39 samples, 1 population(s), 1 group(s).
+Working on 39 samples.
+Working on 1 population(s):
+    1: Ajordan521-cap, Ajordan522-cap, Ajordani86-cap, Ajordani89-cap, Aungak696-cap, Ccandidus-cap, Ccfcypselur-cap, Ccfmelanu1-cap, 
+       Ccfmelanu2-cap, Ccomus970-cap, Ccomus971-cap, Cfurcellu98-cap, Cgilberti81-cap, Cmelanu88, Cphasma07-cap, Cphasma61-cap, 
+       Crystalli1, Crystalli2-cap, Cscottae02-cap, Cscottae04-cap, Cstauffe96-cap, Ebritti822-cap, Ecaudatus1-cap, Ecaudatus2-cap, 
+       Ecaudatus3, Ecaudatus4-cap, Eorbis461-cap, Eorbis821-cap, Lferxi9829-cap, Lflorae666-cap, Lgibbus043-cap, Lgibbus176-cap, 
+       Lnanus2476-cap, Npelagicus-cap, Pdactyl51-cap, Ppenicillu-cap, Pptychoman-cap, Pulochir76, Rattenuatu-cap
+Working on 1 group(s) of populations:
+    defaultgrp: 1
+
+Notice: Population limit (20) larger than number of popualtions present, adjusting parameter to 1
+Raw FASTA consensus sequences for each sample will be written to './stackspl/populations.samples-raw.fa'
+Genotyping markers will be written to './stackspl/populations.markers.tsv'
+Raw Genotypes/Haplotypes will be written to './stackspl/populations.haplotypes.tsv'
+Population-level summary statistics will be written to './stackspl/populations.sumstats.tsv'
+Population-level haplotype summary statistics will be written to './stackspl/populations.hapstats.tsv'
+
+Processing data in batches:
+  * load a batch of catalog loci and apply filters
+  * compute SNP- and haplotype-wise per-population statistics
+  * compute F-statistics
+  * smooth per-population statistics
+  * smooth F-statistics
+  * write the above statistics in the output files
+  * export the genotypes/haplotypes in specified format(s)
+More details in './stackspl/populations.log.distribs'.
+Now processing...
+Batch 1 
+Batch 2 
+
+Removed 622630 loci that did not pass sample/population constraints from 638407 loci.
+Kept 15777 loci, composed of 1972134 sites; 1657 of those sites were filtered, 251473 variant sites remained.
+Mean genotyped sites per locus: 125.00bp (stderr 0.00).
+
+Population summary statistics (more detail in populations.sumstats_summary.tsv):
+  1: 27.018 samples per locus; pi: 0.14364; all/variant/polymorphic sites: 1972134/251473/251473; private alleles: 0
+
+Population pair divergence statistics (more in populations.fst_summary.tsv and populations.phistats_summary.tsv):
+
+Populations is done.
