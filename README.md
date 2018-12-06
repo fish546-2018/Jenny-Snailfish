@@ -1,6 +1,6 @@
 # Analyzing RADSeq Data
 This repository contains my work from the Bioinformatics class FISH 546 Autumn 2018.  
-[Final Presentation](https://github.com/fish546-2018/Jenny-Snailfish/blob/master/progress/flowchart.pdf)
+[Final Presentation](https://github.com/fish546-2018/Jenny-Snailfish/blob/master/progress/finalpres.pdf)
 
 ## Project Description
 The goal of this project is to process data from Restriction-site Associated DNA Sequencing (RADSeq) done on individuals from the family Liparidae, the snailfishes, in order to eventually use that data for a phylogenetic tree.  
